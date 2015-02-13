@@ -1,0 +1,42 @@
+<!-- Documentation sources to help explain what is going in this     -->
+<!-- page can be found at the links below:                           -->
+<!-- http://ionicframework.com/docs/components/#forms-stacked-labels -->
+<!-- http://ionicframework.com/docs/api/service/$ionicModal/         -->
+<ion-modal-view>
+	<ion-header-bar  class="bar-positive">
+		<h1 class="title">Issue Details</h1>
+		<div class="buttons">
+			<a ng-click="closeModal()"
+				class="button button-stable button-clear">
+				Close
+			</a>
+		</div>
+	</ion-header-bar>
+	<ion-content padding="true" scroll="false" class="has-header">
+		<ion-list>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">First Name</span>
+				<input type="text" placeholder="Johnny">
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Last Name</span>
+				<input type="text" placeholder="Appleseed">
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Email</span>
+				<input type="text" placeholder="Johnny@Appleseed.com">
+			</label>
+		</ion-list>
+		<div class="padding">
+			<button class="button button-block"
+				ng-click="closeModal(true)">
+				Save Item
+			</button>
+		</div>
+	<pre>
+	$state = {{$state.current.name}}
+	$stateParams = {{$stateParams}}
+	$state full url = {{ $state.$current.url.source }}
+	</pre>
+	</ion-content>
+</ion-modal-view >

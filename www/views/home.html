@@ -1,0 +1,28 @@
+<!-- -->
+<!-- views/home.html                                                    -->
+<!-- associated with the home state and the HomeController, handles the -->
+<!-- rendering of information specified in the $scope if its controller -->
+<!-- -->
+<ion-view view-title="Home">
+    <ion-nav-buttons side="right">
+      <button class="button" ng-click="doAddNewItem()">
+        New
+      </button>
+    </ion-nav-buttons>    
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="item in items"
+      ng-click="$state.go('detail', {index : $index})">
+      {{item}}
+      </ion-item>
+      <ion-item class="item-text-wrap">
+
+<pre>
+  $state = {{$state.current.name}}
+  $stateParams = {{$stateParams}}
+  $state full url = {{ $state.$current.url.source }}
+</pre>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view >
